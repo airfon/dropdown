@@ -1,13 +1,11 @@
 (function() {
-//    let template = document.createElement("template");
 
     class Dropdown extends HTMLElement {
         constructor() {
             super();
-/*            let shadowRoot = this.attachShadow({
-                mode: "open"
-            });
-            shadowRoot.appendChild(template.content.cloneNode(true));*/
+			let listBox = document.createElement("div");
+			listBox.innerHTML("<span>Hello World</span>");
+			this.appendChild(listBox);
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
                 this.dispatchEvent(event);
