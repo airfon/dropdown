@@ -24,6 +24,7 @@
 					trigger = listLi.getAttribute("key");
 					var event = new Event("onSelect");
 					this.dispatchEvent(event);
+					console.log(trigger);
 				});
 			}
 			listContainer.appendChild(listUl);
