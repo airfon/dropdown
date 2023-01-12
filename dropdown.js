@@ -33,4 +33,5 @@
     customElements.define("com-str-dropdown", Dropdown);
 	//this.parentElement.setAttribute("style","overflow: visible");
 	var parentElements = document.querySelector('div[class~="sap-custom-default-sdk_com_str_dropdown"]');
+	parentElements;
 })();
