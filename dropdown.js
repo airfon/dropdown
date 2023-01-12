@@ -1,17 +1,7 @@
 (function() {
     let template = document.createElement("template");
-    template.innerHTML = `
- <style>
- :host {
- border-radius: 25px;
- border-width: 4px;
- border-color: black;
- border-style: solid;
- display: block;
- } 
- </style>
- `;
-    class dropdown extends HTMLElement {
+
+    class Dropdown extends HTMLElement {
         constructor() {
             super();
             let shadowRoot = this.attachShadow({
@@ -39,5 +29,5 @@
             }
         }
     }
-    customElements.define("com-str-dropdown", dropdown);
+    customElements.define("com-str-dropdown", Dropdown);
 })();
