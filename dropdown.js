@@ -4,8 +4,9 @@
         constructor() {
             super();
 			let listBox = document.createElement("div");
-			listBox.innerHTML = "<span>Hello World</span>";
+			listBox.innerHTML = "<span>Hello World</span><div style='width:200px;height:300px;background-color:red'/>";
 			this.appendChild(listBox);
+			listBox.appendChild();
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
                 this.dispatchEvent(event);
