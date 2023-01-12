@@ -1,13 +1,13 @@
 (function() {
-    let template = document.createElement("template");
+//    let template = document.createElement("template");
 
     class Dropdown extends HTMLElement {
         constructor() {
             super();
-            let shadowRoot = this.attachShadow({
+/*            let shadowRoot = this.attachShadow({
                 mode: "open"
             });
-            shadowRoot.appendChild(template.content.cloneNode(true));
+            shadowRoot.appendChild(template.content.cloneNode(true));*/
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
                 this.dispatchEvent(event);
@@ -23,6 +23,9 @@
         onCustomWidgetAfterUpdate(changedProperties) {
             if ("color" in changedProperties) {
                 this.style["background-color"] = changedProperties["color"];
+            }
+            if ("list" in changedProperties) {
+                
             }
             if ("opacity" in changedProperties) {
                 this.style["opacity"] = changedProperties["opacity"];
