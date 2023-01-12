@@ -4,7 +4,7 @@
         constructor() {
             super();
 			let listBox = document.createElement("div");
-			listBox.innerHTML = "<span>Hello World</span><div style='width:200px;height:300px;background-color:red'/>";
+			listBox.innerHTML = "<style>.hoverbox{opacity:0;z-index:-1;transition:opacity .3s .1s,z-index .1s}.hoverbox:hover{opacity:1;z-index:1;transition:opacity .3s .3s,z-index .1s .6s}</style><span>Hello World</span><div class='hoverbox' style='width:200px;height:300px;background-color:red'/>";
 			this.appendChild(listBox);
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
@@ -32,7 +32,5 @@
     }
     customElements.define("com-str-dropdown", Dropdown);
 	var parentElements = document.querySelector('div[class*="sap-custom-default-sdk_com_str_dropdown"');
-//	for (var i=0;i<parentElements.length;i++) {
 		parentElements.querySelector('div[class~="sapCustomWidget"').setAttribute("style","overflow: visible");
-//	}
 })();
