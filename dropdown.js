@@ -21,7 +21,7 @@
 				listLi.setAttribute("key",keys[ind]);
 				listUl.appendChild(listLi);
 				listLi.addEventListener("click", event => {
-					trigger = this.getAttribute("key");
+					trigger = listLi.getAttribute("key");
 					var event = new Event("onSelect");
 					this.dispatchEvent(event);
 					console.log(trigger);
