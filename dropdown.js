@@ -5,7 +5,15 @@
             super();
 			let listBox = document.createElement("div");
 			listBox.setAttribute("class","hoverbox");
-			listBox.innerHTML = "<style>.hoverbox *:last-child{opacity:0;z-index:-1000;transition:opacity .3s .1s,z-index .1s}.hoverbox *:last-child:hover{opacity:1;z-index:1;transition:opacity .3s .3s,z-index .1s .6s}</style><span>Hello World</span><div style='width:200px;height:300px;background-color:white;position:absolute;top:36px;box-shadow: 0 0.25rem 0.5rem 0 rgba(59,63,73,0.15);'/>";
+			listBox.innerHTML = "<style>.hoverbox *:last-child{opacity:0;z-index:-1000;transition:opacity .3s .1s,z-index .1s}.hoverbox *:last-child:hover{opacity:1;z-index:1;transition:opacity .3s .3s,z-index .1s .6s}</style><span>Hello World</span>";
+			var listContainer = document.createElement("div");
+			listContainer.setAttribute("width","200px");
+			listContainer.setAttribute("height","300px");
+			listContainer.setAttribute("background-color","white");
+			listContainer.setAttribute("position","absolute");
+			listContainer.setAttribute("top","36px");
+			listContainer.setAttribute("box-shadow","0 0.25rem 0.5rem 0 rgba(59,63,73,0.15)");
+			listBox.appendChild(listContainer);
 			this.appendChild(listBox);
 			
             this.addEventListener("click", event => {
