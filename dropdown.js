@@ -1,5 +1,5 @@
 (function() {
-
+	var trigger = "";
     class Dropdown extends HTMLElement {
         constructor() {
             super();
@@ -20,12 +20,17 @@
 				listLi.setAttribute("class","list-li");
 				listLi.setAttribute("key",keys[ind]);
 				listUl.appendChild(listLi);
+				listLi.addEventListener("click", event => {
+					trigger = listLi.getAttribute("key");
+					var event = new Event("onSelect");
+					this.dispatchEvent(event);
+				});
 			}
 			listContainer.appendChild(listUl);
-            this.addEventListener("click", event => {
+ /*           this.addEventListener("click", event => {
                 var event = new Event("onSelect");
                 this.dispatchEvent(event);
-            });
+            });*/
             this._props = {};
         }
         onCustomWidgetBeforeUpdate(changedProperties) {
