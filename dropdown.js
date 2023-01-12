@@ -33,10 +33,7 @@
     customElements.define("com-str-dropdown", Dropdown);
 	//this.parentElement.setAttribute("style","overflow: visible");
 	var parentElements = document.querySelector('div[class*="sap-custom-default-sdk_com_str_dropdown"');
-	parentElements.forEach(function(element) {
-		var innerElements = element.querySelector('div[class~="sapCustomWidget"');
-		innerElements.forEach(function(innerElement) {
-			innerElement.setAttribute("style","overflow: visible");
-		});
-	});
+	for (var i=0;i<parentElements.length;i++) {
+		parentElements[i].querySelector('div[class~="sapCustomWidget"').setAttribute("style","overflow: visible");
+	}
 })();
