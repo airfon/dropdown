@@ -14,7 +14,7 @@
 			var keys = ["0","1","2"];
 			var texts = ["text1","text2","text3"];
 			var listUl = document.createElement("ul");
-			for (var ind=0;ind<keys.length;i++) {
+			for (var ind=0;ind<keys.length;ind++) {
 				var listLi = document.createElement("li");
 				listLi.innerHTML = texts[ind];
 				listLi.setAttribute("class","list-li");
