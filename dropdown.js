@@ -3,14 +3,21 @@
     class Dropdown extends HTMLElement {
         constructor() {
             super();
+			
 			let listBox = document.createElement("div");
 			listBox.setAttribute("class","hoverbox");
-			listBox.innerHTML = "<style>.hoverbox *:last-child{opacity:0;z-index:-1000;transition:opacity .3s .1s,z-index .1s}.hoverbox:hover *:last-child{opacity:1;z-index:1;transition:opacity .3s .3s,z-index .1s .6s}.dd-title{height:32px;line-height:32px;padding-left:8px;}</style><span class='dd-title'>Hello World</span>";
-			var listContainer = document.createElement("div");
+			listBox.innerHTML = "<style>.hoverbox *:last-child{opacity:0;z-index:-1000;transition:opacity .3s .1s,z-index .1s}.hoverbox:hover *:last-child{opacity:1;z-index:1;transition:opacity .3s .3s,z-index .1s .6s}.dd-title{height:32px;line-height:32px;padding-left:8px;}</style>";
 			
+			var title = document.createElement("span");
+			title.setAttribute("class","dd-title");
+			title.innerHTML = "Hello World";
+			listBox.appendChild(title);
+			
+			var listContainer = document.createElement("div");
 			listContainer.setAttribute("style","width:200px;height:300px;background-color:white;position:absolute;top:36px;box-shadow:0 0.25rem 0.5rem 0 rgba(59,63,73,0.15)");
 			listBox.appendChild(listContainer);
 			this.appendChild(listBox);
+			
 			var keys = ["0","1","2"];
 			var texts = ["text1","text2","text3"];
 			var listUl = document.createElement("ul");
@@ -24,6 +31,7 @@
 				var event2 = new Event("onSelect");
 					triggerKey = event.target.getAttribute("key");
 					console.log("js "+triggerKey);
+					title.innerHTML = event.target.getAttribute("text");
 				this.dispatchEvent(event2);
 				});
 			}
