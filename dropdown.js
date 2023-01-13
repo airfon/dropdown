@@ -22,7 +22,7 @@
 				listUl.appendChild(listLi);
 				var event = new Event("onSelect");
 				listLi.addEventListener("click", event => {
-					this.trigger = event.target.getAttribute("key");
+					trigger = event.target.getAttribute("key");
 					console.log(trigger);
 				});
 				this.dispatchEvent(event);
