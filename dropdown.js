@@ -23,7 +23,7 @@
 				var event = new Event("onSelect");
 				listLi.addEventListener("click", event => {
 					triggerKey = event.target.getAttribute("key");
-					console.log("js "+trigger);
+					console.log("js "+triggerKey);
 				});
 				this.dispatchEvent(event);
 			}
