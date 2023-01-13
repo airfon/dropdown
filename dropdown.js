@@ -1,5 +1,5 @@
 (function() {
-	var trigger = "";
+//	var trigger = "";
     class Dropdown extends HTMLElement {
         constructor() {
             super();
@@ -23,7 +23,7 @@
 				var event = new Event("onSelect");
 				listLi.addEventListener("click", event => {
 					trigger = event.target.getAttribute("key");
-					console.log(trigger);
+					console.log("js "+trigger);
 				});
 				this.dispatchEvent(event);
 			}
