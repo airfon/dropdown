@@ -5,7 +5,7 @@
             super();
 			let listBox = document.createElement("div");
 			listBox.setAttribute("class","hoverbox");
-			listBox.innerHTML = "<style>.hoverbox *:last-child{opacity:0;z-index:-1000;transition:opacity .3s .1s,z-index .1s}.hoverbox:hover *:last-child{opacity:1;z-index:1;transition:opacity .3s .3s,z-index .1s .6s}</style><span>Hello World</span>";
+			listBox.innerHTML = "<style>.hoverbox *:last-child{opacity:0;z-index:-1000;transition:opacity .3s .1s,z-index .1s}.hoverbox:hover *:last-child{opacity:1;z-index:1;transition:opacity .3s .3s,z-index .1s .6s}.dd-title{height:32px;line-height:32px;padding-left:8px;}</style><span class='dd-title'>Hello World</span>";
 			var listContainer = document.createElement("div");
 			
 			listContainer.setAttribute("style","width:200px;height:300px;background-color:white;position:absolute;top:36px;box-shadow:0 0.25rem 0.5rem 0 rgba(59,63,73,0.15)");
