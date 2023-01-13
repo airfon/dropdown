@@ -31,7 +31,7 @@
 				var event2 = new Event("onSelect");
 					triggerKey = event.target.getAttribute("key");
 					console.log("js "+triggerKey);
-					title.innerHTML = event.target.getAttribute("text");
+					title.innerHTML = event.target.getInnerHTML();
 				this.dispatchEvent(event2);
 				});
 			}
