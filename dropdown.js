@@ -22,7 +22,7 @@
 				listUl.appendChild(listLi);
 				var event = new Event("onSelect");
 				listLi.addEventListener("click", event => {
-					trigger = event.target.getAttribute("key");
+					this.trigger = event.target.getAttribute("key");
 					console.log(trigger);
 				});
 				this.dispatchEvent(event);
@@ -46,6 +46,9 @@
             }
             if ("list" in changedProperties) {
                 
+            }
+            if ("trigger" in changedProperties) {
+                this.trigger = changedProperties["trigger"];
             }
             if ("opacity" in changedProperties) {
                 this.style["opacity"] = changedProperties["opacity"];
