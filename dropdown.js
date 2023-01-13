@@ -18,8 +18,8 @@
 			listBox.appendChild(listContainer);
 			this.appendChild(listBox);
 			
-			var keys = ["0","1","2"];
-			var texts = ["text1","text2","text3"];
+			var keys = ["04BTBQRWKT36EGYX4HYA1LLO0","04BTBQRWKT36EGYX4HYA1MTWW","04BTBQRWKT36EGYX4HYA1N08G","04BTBQRWKT36EGYX4HYA1N6K0","04BTBQRWKT36EGYX4HYA1LYB4","04BTBQRWKT36EGYX4HYA1NPIO","04BTBQRWKT36EP8ZTLUWL2JUF","04BTBQRWKT36EP8ZTLUWL2Q5Z","04BTBQRWKT36EP8ZTLUWL2WHJ","04BTBQRWKT36EILBZ3CM9OEEP","04BTBQRWKT36EILBZ3CM9OKQ9","04BTBQRWKT36EILBZ3CM9OR1T","04BTBQRWKT384TN4L2BYSQ52J","04BTBQRWKT384TN4L2BYSQ52J"];
+			var texts = ["Net Sales","Sales Discount %","Standard Margin %","Net ASP","Net Volume","Gross Inventory Value","IDL Val - IOH","IDL Val - GIT","IDL Value","Gross Sales","Gross ASP","CoS per piece","Go in Margin","Go in Margin"];
 			var listUl = document.createElement("ul");
 			for (var ind=0;ind<keys.length;ind++) {
 				var listLi = document.createElement("li");
