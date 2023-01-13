@@ -20,10 +20,10 @@
 				listLi.setAttribute("class","list-li");
 				listLi.setAttribute("key",keys[ind]);
 				listUl.appendChild(listLi);
-				var event = new Event("onSelect");
 				listLi.addEventListener("click", event => {
-					triggerKey = event.target.getAttribute("key");
-					console.log("js "+triggerKey);
+				var event = new Event("onSelect");
+					//triggerKey = event.target.getAttribute("key");
+					//console.log("js "+triggerKey);
 				this.dispatchEvent(event);
 				});
 			}
