@@ -48,7 +48,7 @@
                 
             }
             if ("trigger" in changedProperties) {
-                this.triggerKey = changedProperties["trigger"];
+                triggerKey = changedProperties["trigger"];
             }
             if ("opacity" in changedProperties) {
                 this.style["opacity"] = changedProperties["opacity"];
