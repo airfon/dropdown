@@ -1,5 +1,5 @@
 (function() {
-//	var trigger = "";
+	var triggerKey = "";
     class Dropdown extends HTMLElement {
         constructor() {
             super();
@@ -22,7 +22,7 @@
 				listUl.appendChild(listLi);
 				var event = new Event("onSelect");
 				listLi.addEventListener("click", event => {
-					trigger = event.target.getAttribute("key");
+					triggerKey = event.target.getAttribute("key");
 					console.log("js "+trigger);
 				});
 				this.dispatchEvent(event);
@@ -48,7 +48,7 @@
                 
             }
             if ("trigger" in changedProperties) {
-                this.trigger = changedProperties["trigger"];
+                this.triggerKey = changedProperties["trigger"];
             }
             if ("opacity" in changedProperties) {
                 this.style["opacity"] = changedProperties["opacity"];
